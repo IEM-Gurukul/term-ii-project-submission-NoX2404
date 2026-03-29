@@ -11,12 +11,12 @@ public class Frame {
 
     public static void main(String[] args) {
         JFrame j = new JFrame("2D_GAME");//this is the window
-        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Users\\Debroop\\IdeaProjects\\Game_2D\\src\\pics\\iconic.PNG");//creates icon for the application
+        Image icon = Toolkit.getDefaultToolkit().getImage(".\\src\\pics\\iconic.PNG");//creates icon for the application
         j.setIconImage(icon);
         j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//closes frame
         j.setResizable(false);
         j.setSize(500, 200);//frame size
-        j.setContentPane(new JLabel(new ImageIcon("C:\\Users\\Debroop\\IdeaProjects\\Game_2D\\src\\pics\\bg2.PNG")));//applies color
+        j.setContentPane(new JLabel(new ImageIcon(".\\src\\pics\\bg2.PNG")));//applies color
         j.setLocationRelativeTo(null);//centers the frame to the screen
         j.setVisible(true);
         j.setLayout(null);
@@ -87,7 +87,7 @@ public class Frame {
         });
         j.add(b1);//adds button to main frame
 
-        Icon icon2 = new ImageIcon("C:\\Users\\Debroop\\IdeaProjects\\Game_2D\\src\\pics\\equipment.PNG");
+        Icon icon2 = new ImageIcon(".\\src\\pics\\equipment.PNG");
         JButton b2 = new JButton();
         b2.setBounds(200, 50, 100, 50);//size of button and coordinates
         b2.setIcon(icon2);
@@ -176,7 +176,7 @@ public class Frame {
                 j2.setLocationRelativeTo(null);//centers the frame to the screen
                 j2.setVisible(true);
                 j2.setLayout(new BorderLayout());
-                j2.setContentPane(new JLabel(new ImageIcon("C:\\Users\\Debroop\\IdeaProjects\\Game_2D\\src\\pics\\bg3.PNG")));
+                j2.setContentPane(new JLabel(new ImageIcon(".\\src\\pics\\bg3.PNG")));
                 j2.setLayout(null);
                 j2.pack();
 
@@ -242,7 +242,7 @@ public class Frame {
                                 draw.setLocationRelativeTo(null);
                                 draw.setResizable(false);
                                 draw.setVisible(true);
-                                draw.setContentPane(new JLabel(new ImageIcon("C:\\Users\\Debroop\\IdeaProjects\\Game_2D\\src\\pics\\winlose.PNG")));
+                                draw.setContentPane(new JLabel(new ImageIcon(".\\src\\pics\\winlose.PNG")));
                                 draw1.setBounds(100,50,100,25);
                                 draw.add(draw1);
                                 draw.pack();
@@ -272,7 +272,7 @@ public class Frame {
                                 win.setLocationRelativeTo(null);
                                 win.setResizable(false);
                                 win.setVisible(true);
-                                win.setContentPane(new JLabel(new ImageIcon("C:\\Users\\Debroop\\IdeaProjects\\Game_2D\\src\\pics\\winlose.PNG")));
+                                win.setContentPane(new JLabel(new ImageIcon(".\\src\\pics\\winlose.PNG")));
                                 win1.setBounds(100,50,100,25);
                                 win.add(win1);
                                 win.pack();
@@ -302,7 +302,7 @@ public class Frame {
                                 lose.setLocationRelativeTo(null);
                                 lose.setResizable(false);
                                 lose.setVisible(true);
-                                lose.setContentPane(new JLabel(new ImageIcon("C:\\Users\\Debroop\\IdeaProjects\\Game_2D\\src\\pics\\winlose.PNG")));
+                                lose.setContentPane(new JLabel(new ImageIcon(".\\src\\pics\\winlose.PNG")));
                                 lose1.setBounds(100,50,100,25);
                                 lose.add(lose1);
                                 lose.pack();
