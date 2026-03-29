@@ -1,0 +1,71 @@
+classDiagram
+    class GameGUI {
+        -JFrame mainFrame
+        -JButton[] actionButtons
+        -GameManager manager
+        +updateDisplay()
+        +actionPerformed(ActionEvent e)
+    }
+
+    class GameManager {
+        -HashMap~String, Entity~ activeEntities
+        -HashMap~String, Item~ gameItems
+        +randomizeSpawn() Enemy
+        +processTurn()
+    }
+
+    class Entity {
+        <<abstract>>
+        -int health
+        -int damage
+        -int defense
+        -Image spriteArt
+        +takeDamage(int amount)
+        +attack(Entity target)
+    }
+
+    class Player {
+        -HashMap~String, Item~ inventory
+        +equipItem(Item item)
+        +usePotion(Potion p)
+    }
+
+    class Enemy {
+        -String enemyType
+        -Item dropLoot
+        +calculateAI()
+    }
+
+    class Item {
+        <<abstract>>
+        -String name
+        -Image itemIcon
+        +applyEffect(Entity target)
+    }
+
+    class Weapon {
+        -int damageModifier
+    }
+
+    class Equipment {
+        -int defenseModifier
+    }
+
+    class Potion {
+        -int healAmount
+    }
+
+    %% Relationships
+    GameGUI ..|> java.awt.event.ActionListener : Implements
+    GameGUI --* GameManager : Contains
+    GameManager o-- Entity : Manages in HashMap
+    GameManager o-- Item : Manages in HashMap
+    
+    Entity <|-- Player : Inherits
+    Entity <|-- Enemy : Inherits
+    
+    Item <|-- Weapon : Inherits
+    Item <|-- Equipment : Inherits
+    Item <|-- Potion : Inherits
+    
+    Player o-- Item : Has Inventory
