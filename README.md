@@ -19,9 +19,7 @@
 * **Efficient State Management:** Utilizes `HashMap` for $O(1)$ retrieval of entities, weapons, and inventory items.
 * **Custom GUI:** Built with Java Swing/AWT, featuring custom-made art assets and interactive event listeners.
 * **Modular Design:** Strict adherence to OOP encapsulation and inheritance for scalable game logic.
-- 
-- 
-- 
+
 
 ---
 
